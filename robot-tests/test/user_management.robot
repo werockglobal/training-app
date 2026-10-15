@@ -8,9 +8,9 @@ Suite Teardown    Close Browser
 
 Verify List Users While Logged In
     [Documentation]    Verify logged-in user can see users list
-    Run Keyword And Ignore Error  Register New User    testuserw206    testpass1205
-    Enter Login Username  testuserw206
-    Enter Login Password  testpass1205
+    Run Keyword And Ignore Error  Register New User    werock    12345
+    Enter Login Username  werock
+    Enter Login Password  12345
     Click Login Button
     Wait For Elements State    text=Login successful    visible    timeout=10s
     Click Show all user Button
@@ -40,10 +40,10 @@ Verify List Users While Logged Out
 
 Verify Users List Shows Newly Registered User
     [Documentation]    Verify newly registered user appears in users list
-    Enter Login Username  testuserw206
-    Enter Login Password  testpass1205
+    Enter Login Username  werock
+    Enter Login Password  12345
     Click Login Button
-    Wait For Elements State    text=Login successful    visible
+    Wait For Elements State    text=Login successful    visible    timeout=10s
     Click Show all user Button
     Wait For Elements State    ${USERS_LIST}    visible
     ${user_count}=    Get Element Count    ${TABLE_ROWS}  

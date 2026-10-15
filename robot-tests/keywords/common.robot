@@ -98,4 +98,11 @@ Click Delete User Button
 Click Delete My Account Button
     Wait For Element To Be Visible   ${DELETE_MY_ACCOUNT}    timeout=10s
     Click  ${DELETE_MY_ACCOUNT}
+
+Click on Contact Us button
+    Wait For Element To Be Visible   ${CONTACT_US_BUTTON}    timeout=10s
+    Click    ${CONTACT_US_BUTTON}
     
+Click Protected Site Logout Button
+    Wait For Element To Be Visible   ${PROTECTED_LOGOUT_BUTTON}    timeout=10s
+    Click    ${PROTECTED_LOGOUT_BUTTON}

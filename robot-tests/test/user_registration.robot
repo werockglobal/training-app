@@ -12,13 +12,13 @@ Verify Successful User Registration
     ${new_reg_user}=    Set Variable    newuser_${rand}
     Set Suite Variable    ${new_reg_user}
     Enter Username    ${new_reg_user}
-    Enter Password    testpass123
+    Enter Password    12345
     Click Sign Up Button
     Wait For Elements State  text=Registration successful! Please login to continue.  visible  timeout=2s
 
 Verify Registration Failed With Existing Username
     [Documentation]    Verify the user was registered successfully
     Enter Username    ${new_reg_user}
-    Enter Password    testpass123
+    Enter Password    12345
     Click Sign Up Button
     Wait For Elements State  text=Registration failed: Username already exists    visible  timeout=2s

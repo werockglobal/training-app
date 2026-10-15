@@ -22,3 +22,8 @@ ${DELETE_BTN}                   //button[text()="Delete User"]
 ${DELETE_NOTE}                  //*[@id="confirmModal"]/div
 ${DELETE_CONFIRM}               //button[text()="Confirm"]
 ${DELETE_MY_ACCOUNT}            //button[@onclick='deleteAccount()']
+${CONTACT_US_BUTTON}            //header//a[@href="contact.html"]
+${GET_IN_TOUCH}                 //h1[text()="Get in Touch"]
+${MAIN_CONTENT}                  //*[@id="main-content"]
+${PROFILE_STATUS}                //*[@id="profile_status"]
+${PROTECTED_LOGOUT_BUTTON}       xpath=(//button[normalize-space()="Logout"])[1]

@@ -8,23 +8,23 @@ Suite Teardown   Close browser
 
 Verify successful user login
     [Documentation]   verify the User is able to log in succesfully
-    Run Keyword And Ignore Error  Register New User    Bibi    12345
-    Enter Login Username     Bibi  
+    Run Keyword And Ignore Error  Register New User    werock    12345
+    Enter Login Username     werock  
     Enter Login Password     12345
     Click Login Button      
     Wait For Elements State  text=Login successful  visible  timeout=2s
 
 Verify unsuccessful user login with an invalid password
     [Documentation]  verify the user is unable to log in with an invalid password
-    Run Keyword And Ignore Error  Register New User    Efe    12345
-    Enter Login Username            Efe
-    Enter Login Password            Invalidpass1
+    Run Keyword And Ignore Error  Register New User    werock    12345
+    Enter Login Username            werock
+    Enter Login Password            wrongpassword
     Click Login Button      
     Wait For Elements State         text=Login failed    visible  timeout=2s
 
 Verify unsuccessful user login with non-existent user
     [Documentation]  verify the user is unable to log in as a non-existent user
-    Enter Login Username         bibi   
+    Enter Login Username         werock   
     Enter Login Password         remote
     Click Login Button      
     Wait For Elements State         text=Login failed    visible  timeout=2s
@@ -38,7 +38,7 @@ Verify unsuccessful user login with empty fields
 
 Verify session persistence after page refresh
     [Documentation]    verify the user remains logged in after refreshing the page
-    Enter Login Username         Bibi
+    Enter Login Username         werock
     Enter Login Password         12345
     Click Login Button      
     Wait For Elements State     text=Login successful  visible  timeout=2s
